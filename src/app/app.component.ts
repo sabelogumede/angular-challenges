@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AccordionItem } from './components/accordion/accordion-item.interface';
 
 
 
@@ -9,5 +10,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-challenges';
+  public accordionItems: AccordionItem[] = [
+    {
+      title: 'Example 1',
+      content: 'Example content 1',
+      isExpanded: false,
+    },
+    {
+      title: 'Example 2',
+      content: 'Example content 2',
+      isExpanded: false,
+    }
+  ]
 }

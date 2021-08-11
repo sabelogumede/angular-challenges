@@ -8,12 +8,25 @@
     <li>Other</li>
   </ul>
 </app-toolbar>
-<!-- card component -->
-<app-card
-  [iconClasses]="'fas fa-info-circle'"
-  [title]="'Card'"
-  [subTitle]="'Components'"
->
-  <p body>Body Content</p>
-  <p footer>FooterContent</p>
-</app-card>
+
+<main>
+  <!-- card component -->
+  <app-card
+    [iconClasses]="'fas fa-info-circle'"
+    [title]="'Accordion'"
+    [subTitle]="'Components'"
+  >
+    <!-- nested accordion component -->
+    <app-accordion body [items]="accordionItems"></app-accordion>
+  </app-card>
+
+  <!-- card component -->
+  <app-card
+    [iconClasses]="'fas fa-info-circle'"
+    [title]="'Card'"
+    [subTitle]="'Components'"
+  >
+    <p body>Body Content</p>
+    <p footer>FooterContent</p>
+  </app-card>
+</main>
