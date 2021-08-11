@@ -1,0 +1,36 @@
+@import "../../../styles";
+
+.toolbar-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 10px;
+  background-color: $blue;
+  color: white;
+
+  @include box-shadow();
+
+  // breakpoint- Tablet
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
+  // breakpoint- Desktop
+  // @media screen and (max-width: 768px) {
+  //   grid-template-columns: 1fr;
+  // }
+}
+
+// styling components in our parent component
+:host ::ng-deep {
+  ul {
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-flow: column;
+
+    li {
+      display: inline;
+    }
+  }
+}
